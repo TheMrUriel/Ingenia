@@ -1,17 +1,17 @@
+{% extends 'Conex/Conex.html' %} {% block content %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {%load static%}
-    <link rel="stylesheet" href="{% static 'Ingeniaapp/css/Encabezado.css'%}" />
+    <title>Ingenia</title>
   </head>
   <body>
-    <header>
-      <div class="encabezado">
-        <h1>INGENIA</h1>
+    <div style="padding-top: 30px">
+      <div style="padding-bottom: 30px">
+        {% include 'Components/evento_card.html' %}
       </div>
-    </header>
+    </div>
   </body>
-  {% block content %} {% endblock %}
 </html>
+{% endblock %}
