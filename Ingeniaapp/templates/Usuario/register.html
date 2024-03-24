@@ -1,0 +1,32 @@
+{% extends 'Conex/Conex.html' %} {% block content %} {% load static %}
+<div id="login-container">
+  <form method="POST" autocomplete="off">
+    {% csrf_token %}
+    <h2>Registrarse</h2>
+
+    <label for="{{ registerform.nombre.id_for_label }}">Nombre:</label>
+    {{ registerform.nombre }}
+
+    <label for="{{ registerform.apellido.id_for_label }}">Apellido:</label>
+    {{ registerform.apellido }}
+
+    <label for="{{ registerform.username.id_for_label }}">Usuario:</label>
+    {{ registerform.username }}
+
+    <label for="{{ registerform.email.id_for_label }}">Correo:</label>
+    {{ registerform.email }}
+
+    <label for="{{ registerform.password1.id_for_label }}">Contraseña:</label>
+    {{ registerform.password1}}
+
+    <label for="{{ registerform.password2.id_for_label }}"
+      >Confirmar contraseña:</label
+    >
+    {{ registerform.password2}}
+
+    <input type="submit" value="Registrarse" />
+  </form>
+
+  <a href="/login/"> Iniciar Sesión </a>
+</div>
+{% endblock %}
